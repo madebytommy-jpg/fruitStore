@@ -1,0 +1,103 @@
+.container_all{
+    .container_productos{
+        width: 100%;
+        h2{
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            font-size: 3.3em;
+            margin-bottom: 50px;
+        }
+        .container_producto_items{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .card{
+                width: 21%;
+                //border: 1px solid rgba(0, 0, 0, 0.3);
+                margin-bottom: 70px;
+                height: auto;
+                position: relative;
+                
+                .container_img_card{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    overflow: hidden;
+                    height: 250px;
+                    margin-bottom: 20px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .descripcion_card{
+                    background-color: #168AAD;
+                    color: #fff;
+                    h4{
+                        font-size: 1.5em;
+                        padding-top: 20px;
+                        padding-bottom: 15px;
+                        padding-left: 20px;
+                    }
+                    .informacion_precio_producto{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        padding-bottom: 10px;
+                        p{
+                            display: inline-block;
+                        }
+                    }
+                    .informacion_cantidad{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        padding-bottom: 10px;
+                        .informacion_botones{
+                            span{
+                                margin-left: 10px;
+                            }
+                            button{
+                                padding-left: 10px;
+                                padding-right: 10px;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                    .totalCard{
+                        margin: auto;
+                        width: 100%;
+                        display: inline-block;
+                        text-align: center;
+                    }
+                    .button{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        padding-top: 10px;
+                        padding-bottom: 20px;
+                        button{
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            padding-top: 7px;
+                            padding-bottom: 7px;
+                            border-radius: 20px;
+                            border: none;
+                            cursor: pointer;
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

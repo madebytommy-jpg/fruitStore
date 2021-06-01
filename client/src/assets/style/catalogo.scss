@@ -1,0 +1,73 @@
+.contenedor_menu_catalogo{
+    margin-bottom: 30px;
+    .menu{
+        display: flex;
+        flex-direction: row;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-content: space-around;
+        width: 90%;
+        margin: auto;
+        a{
+            text-decoration: none;
+            color: #000;
+            width: 17%;
+        }
+        .numero_contacto{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 21%;
+            i{
+                display: inline-block;
+                font-size: 1.3em;
+            }
+            p{
+                display: inline-block;
+            }
+        }
+    }
+    .contenedor_carrito_de_compra{
+        background-color: #52B69A;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .buscador{
+            width: 50%;
+            input{
+                display: inline-block;
+                width: 90%;
+                border-radius: 20px;
+                border: none;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 10px;
+            }
+        }
+        .carrito_de_compra{
+            align-self: center;
+            width: 15%;
+            padding-left: 100px;
+            i{
+            display: inline-block;
+            }
+            p{
+            display: inline-block;
+            padding-left: 30px;
+            }
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            align-self: center;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #B5E48C;
+            border-radius: 20px;
+        }
+    }
+}

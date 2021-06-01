@@ -1,0 +1,52 @@
+.informacion{
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: #000;
+    h2{
+        text-align: center;
+        font-size: 3em;
+        display: inline-block;
+        width: 100%;
+        font-weight: 400;
+        color: #fff;
+    }
+    hr{
+        border-top: 1px solid #fff;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    .container_informacion{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .informacion_contacto{
+            width: 40%;
+            .texto_informativo{
+                padding-bottom: 10px;
+                h3{
+                    padding-bottom: 15px;
+                    color: #fff;
+                }
+                p{
+                    padding-bottom: 10px;
+                    color: #fff;
+                }
+            }
+        }
+        .horarios_atencion{
+            width: 40%;
+            h3{
+                padding-bottom: 15px;
+                color: #fff;
+            }
+            p{
+                padding-bottom: 10px;
+                color: #fff;
+            }
+        }
+    }
+}
