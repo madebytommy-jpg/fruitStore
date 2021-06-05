@@ -27,8 +27,10 @@ function Card({ src, nombre_producto, metodo_de_compra, precio }){
 
     const enviarPedido = () => {
         Axios.post("http://localhost:3001/api/insert", {
-            nombre: nombre_producto, 
-            total_compra: totalCard
+            nombre_producto: nombre_producto, 
+            total_card: totalCard,
+            precio: precio,
+            cantidad: contador
         }).then(()=>{
             alert("successful insert")
         })
@@ -37,7 +39,7 @@ function Card({ src, nombre_producto, metodo_de_compra, precio }){
     return  (
         <div className="card">
             <div className="container_img_card">
-                <img src={src} alt="slide-img"></img>
+                <img src={src} alt={nombre_producto}></img>
             </div>
             <div className="descripcion_card">
                 <h4>{nombre_producto}</h4>

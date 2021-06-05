@@ -1,4 +1,4 @@
-const express = require("express")
+const express = require("express")  
 const bodyParser = require("body-parser")
 const cors = require("cors")
 const app = express()
@@ -17,11 +17,13 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 app.post("/api/insert", (req, res) => {
 
-    const nombre = req.body.nombre
-    const total_compra = req.body.total_compra
+    const nombre_producto = req.body.nombre_producto
+    const total_card = req.body.total_card
+    const precio = req.body.precio
+    const cantidad = req.body.cantidad
 
-    const sqlInsert = "INSERT INTO frutasyverduras (nombre, total_compra) VALUES (?,?)"
-    db.query(sqlInsert, [nombre, total_compra], (err, result) => {
+    const sqlInsert = "INSERT INTO frutasyverdurasdb (nombre_producto, precio, total_card, cantidad) VALUES (?,?,?,?)"
+    db.query(sqlInsert, [nombre_producto, precio, total_card, cantidad], (err, result) => {
         console.log(result)
     })
 })
