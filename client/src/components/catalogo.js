@@ -27,7 +27,7 @@ function Catalogo (){
                     Verduras
                 </Link>
                 <div className="numero_contacto">
-                    <i class="fas fa-phone-volume"></i>
+                    <i className="fas fa-phone-volume"></i>
                     <p>
                         <strong>Contacto:</strong>  0993294856
                     </p>
@@ -38,7 +38,7 @@ function Catalogo (){
                     <input type="text" placeholder="search..." onChange={event => {setSearchTerm(event.target.value)}}/>
                 </div>
                 <div className="carrito_de_compra">
-                    <i class="fas fa-shopping-cart"></i>
+                    <i className="fas fa-shopping-cart"></i>
                     <p>$ 0</p>
                 </div>
                 <Link to="">
