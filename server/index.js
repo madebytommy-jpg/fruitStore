@@ -15,6 +15,14 @@ app.use(cors())
 app.use(express.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
+
+app.get("/api/get", (req, res) => {
+    const sqlSelect = "SELECT * FROM frutasyverdurasdb"
+    db.query(sqlSelect, (err, result) => {
+        res.send(result)
+    })
+})
+
 app.post("/api/insert", (req, res) => {
 
     const nombre_producto = req.body.nombre_producto

@@ -1,14 +1,26 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useState } from "react"
 import { Switch, Route, Link } from "react-router-dom"
 import "../assets/style/catalogo.scss"
 import Frutas from "../components/frutas"
 import Verduras from "../components/verduras"
 import "../assets/style/producto.scss"
+import Axios from "axios"
 
 function Catalogo (){
     const [searchTerm, setSearchTerm] = useState("")
+    const [obtenerValorCarrito, setObtenerValorCarrito] = useState([])
     localStorage.setItem("searchTerm", searchTerm)
+
+    useEffect(() => {
+        Axios.get("http://localhost:3001/api/get").then((response) => {
+            setObtenerValorCarrito(response.data)
+        })
+    }, [])
+
+    const valorCarrito = obtenerValorCarrito.reduce((acc, item) => {
+        return acc += item.total_card
+    }, 0)
     
     return(
         <div className="container_all">
@@ -39,7 +51,7 @@ function Catalogo (){
                 </div>
                 <div className="carrito_de_compra">
                     <i className="fas fa-shopping-cart"></i>
-                    <p>$ 0</p>
+                    <p>$ {valorCarrito}</p>
                 </div>
                 <Link to="">
                     Comprar

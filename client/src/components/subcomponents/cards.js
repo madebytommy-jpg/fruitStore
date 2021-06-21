@@ -26,15 +26,23 @@ function Card({ src, nombre_producto, metodo_de_compra, precio }){
     }
 
     const enviarPedido = () => {
+
         Axios.post("http://localhost:3001/api/insert", {
             nombre_producto: nombre_producto, 
             total_card: totalCard,
             precio: precio,
             cantidad: contador
-        }).then(()=>{
-            alert("successful insert")
         })
-    }
+
+        /* setObtenerValorCarrito([
+            ...obtenerValorCarrito,{
+                nombre_producto: nombre_producto, 
+                total_card: totalCard,
+                precio: precio,
+                cantidad: contador
+            }
+        ]) */
+    }   
 
     return  (
         <div className="card">
